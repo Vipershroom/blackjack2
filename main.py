@@ -11,5 +11,5 @@ def getPlayers():
         playerList.append(Person(name, []))
     return playerList
 
-print("Welcome to Blackjack")
-
+if __name__ == "__main__":
+    print("Welcome to Blackjack")
