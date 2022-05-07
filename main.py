@@ -1,8 +1,4 @@
 from Person import Person
-import random
-
-def drawCard():
-    return random.randint(1,21)
 
 def getPlayers():
     print("How many players?")
