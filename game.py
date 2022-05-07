@@ -5,5 +5,8 @@ import os
 def drawCard():
     return random.randint(1,21)
 
+def turns():
+    pass
+
 def game(playerList):
-    print(playerList)
+    playerAmount = len(playerList)
