@@ -3,7 +3,15 @@ import os
 
 
 def drawCard():
-    return random.randint(1,21)
+    randnum = random.randint(1,11)
+    if randnum == 11:
+        print("You rolled an ace. Do you want it to act as 1 or 11?")
+        ans = input()
+        if ans == "11":
+            return 11
+        else:
+            return 1
+    return randnum
 
 def turns(player):
     print(f"Hello, {player.name}")
