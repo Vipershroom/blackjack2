@@ -19,7 +19,13 @@ def turns(player):
         player.cards.append(drawCard())
         player.cards.append(drawCard())
     print(player.cards)
+    
+def dealerTurn(player):
+    pass
 
 def game(playerList):
     for i in playerList:
-        turns(i)
+        if i.name == "Dealer":
+            dealerTurn(i)
+        else:
+            turns(i)
