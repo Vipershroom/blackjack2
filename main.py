@@ -14,6 +14,7 @@ def getPlayers():
     
     if amount == 1:
         print("You will be facing the dealer")
+        playerList.append(Person("Dealer", []))
     
     return playerList
 
