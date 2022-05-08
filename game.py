@@ -18,14 +18,28 @@ def turns(player):
     if player.cards == []:
         player.cards.append(drawCard())
         player.cards.append(drawCard())
-    print(player.cards)
+    print(f"Your cards are {player.cards}\nThe sum is {sum(player.cards)}")
+    print("Would you like to {draw} or {hold?}")
+    while True:
+        ans = input()
+        if ans == "draw":
+            player.cards.append(drawCard())
+            print(f"Your cards are {player.cards}\nThe sum is {sum(player.cards)}")
+            print("Press enter to continue") 
+            input()
+        break
+    os.system("cls")
+    print("It is now time for the next players turn.\nOnce they have been seated you may press enter")
+    input()
+    os.system('cls')
     
 def dealerTurn(player):
     pass
 
 def game(playerList):
-    for i in playerList:
-        if i.name == "Dealer":
-            dealerTurn(i)
-        else:
-            turns(i)
+    while True:
+        for i in playerList:
+            if i.name == "Dealer":
+                dealerTurn(i)
+            else:
+                turns(i)
