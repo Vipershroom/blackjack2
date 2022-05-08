@@ -15,16 +15,21 @@ def drawCard():
 
 def turns(player):
     print(f"Hello, {player.name}")
+    
     if player.cards == []:
         player.cards.append(drawCard())
         player.cards.append(drawCard())
-    print(f"Your cards are {player.cards}\nThe sum is {sum(player.cards)}")
+        
+    cardSum = sum(player.cards)
+    
+    print(f"Your cards are {player.cards}\nThe sum is {cardSum}")
     print("Would you like to {draw} or {hold?}")
+    
     while True:
         ans = input()
         if ans == "draw":
             player.cards.append(drawCard())
-            print(f"Your cards are {player.cards}\nThe sum is {sum(player.cards)}")
+            print(f"Your cards are {player.cards}\nThe sum is {cardSum}")
             print("Press enter to continue") 
             input()
         break
